@@ -7,6 +7,11 @@ export const Board = (props) => {
             <Square
                 value={props.squares[i]}
                 onClick={() => props.onClick(i)}
+                winning={
+                    props.winningLine 
+                        ? props.winningLine.includes(i)
+                        : false
+                }
             />
         )
     }
