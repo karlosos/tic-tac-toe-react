@@ -23,7 +23,7 @@ export const Game = () => {
     });
     let status = winner 
         ? 'Winner: ' + winner.winner
-        : 'Next player: ' + (xIsNext ? 'X' : 'O');
+        : 'Move: ' + (xIsNext ? 'X' : 'O');
 
     let winningLine = null;
     if (winner) {
