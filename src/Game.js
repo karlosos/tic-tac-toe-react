@@ -61,7 +61,7 @@ export const Game = () => {
                 />
             </div>
             <div className="game-info">
-                <div>{status}</div>
+                <div><h2>{status}</h2></div>
                 <ol>{moves}</ol>
             </div>
         </div>

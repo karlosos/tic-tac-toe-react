@@ -1,0 +1,189 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
+
+/*
+VARIABLES
+*/
+
+$background-color: #E9E1CC;
+$background-color-active: #DBD2BB;
+$text-color: #3F3F3F;
+$accent-color-1: #2A7886;
+$accent-color-1-active: #17434B;
+$accent-color-2: #D45079;
+$accent-color-2-active: #6E5773;
+$accent-color-3: #EA9085;
+
+/*
+MIXINS
+*/ 
+
+@mixin no-top-border {
+  border-top: none;
+}
+
+@mixin no-bottom-border {
+  border-bottom: none;
+}
+
+@mixin no-left-border {
+  border-left: none;
+}
+
+@mixin no-right-border {
+  border-right: none;
+}
+
+@mixin animation($name, $color-main, $color-alt) {
+  line, circle {
+    stroke: $color-main;
+    animation-name: #{$name};
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+  }
+  
+  @keyframes #{$name} {
+    0% {
+      stroke: $color-main;
+    }
+    50% {
+      stroke: $color-alt;
+    }
+    100% {
+      stroke: $color-main;
+    }
+  }
+}
+
+/*
+STYLES
+*/
+
+body {
+  font-family: 'Open Sans', ;
+  margin: 20px;
+  background-color: $background-color;
+}
+
+ol,
+ul {
+  padding-left: 30px;
+}
+
+.board-row:after {
+  clear: both;
+  content: "";
+  display: table;
+}
+
+.status {
+  margin-bottom: 10px;
+}
+.square {
+  background: $background-color;
+  border: 2px solid $accent-color-3;
+  float: left;
+  margin-right: -1px;
+  margin-top: -1px;
+  padding: 20px;
+  text-align: center;
+  height: 170px;
+  width: 170px;
+
+  button {
+    font-size: 24px;
+    font-weight: bold;
+    line-height: 34px;
+    background: $background-color;
+    border: none;
+    width: 100%;
+    height: 100%;
+
+    &:hover {
+      background-color: $background-color-active;
+      border-radius: 20px;
+    }
+
+    &:focus {
+      outline: none;
+    }
+  }
+}
+
+
+
+.game-board {
+  div {
+    .board-row:first-child {
+      .square {
+        @include no-top-border();
+      }
+    }
+
+    .board-row:last-child {
+      .square {
+        @include no-bottom-border();
+      }
+    }
+
+    .board-row {
+      .square:first-child {
+        @include no-left-border();
+      }
+
+      .square:last-child {
+        @include no-right-border();
+      }
+    }
+  }
+}
+
+.square:focus {
+  outline: none;
+}
+
+.winning {
+    &.O {
+      @include animation('O', $accent-color-2, $accent-color-2-active);
+    }
+
+    &.X {
+      @include animation('X', $accent-color-1, $accent-color-1-active);
+    }
+}
+
+.kbd-navigation .square:focus {
+  background: #ddd;
+}
+
+.game {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.game-info {
+  margin-left: 50px;
+  ol {
+    li {
+      margin-bottom: 5px;
+      &:nth-child(odd) {
+        color: $accent-color-1;
+      }
+      &:nth-child(even) {
+        color: $accent-color-2;
+      }
+    }
+  }
+
+  button {
+    background: none !important;
+    border: none;
+    padding: 0 !important;
+    cursor: pointer;
+    font-size: 17px;
+    margin-left: 5px;
+    &:focus {
+      outline: none;
+    }
+  }
+}
