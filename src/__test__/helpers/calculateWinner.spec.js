@@ -29,6 +29,6 @@ describe('calculateWinner', () => {
         squares[0] = 'O';
         squares[3] = 'X';
         squares[6] = 'O';
-        expect(calculateWinner(squares)).toBe(true);
+        expect(calculateWinner(squares)).toBe(null);
     });
 });
