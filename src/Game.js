@@ -17,7 +17,7 @@ export const Game = () => {
             'Go to game start';
         return (
             <li key={move}>
-                <button onClick={() => jumpTo(move)}>{desc}</button>
+                <button className="jump_to" onClick={() => jumpTo(move)}>{desc}</button>
             </li>
         )
     });
@@ -52,7 +52,7 @@ export const Game = () => {
     }
 
     return (
-        <div className="game">
+        <div className="game" data-testid='game'>
             <div className="game-board">
                 <Board
                     squares={current.squares}
@@ -61,7 +61,7 @@ export const Game = () => {
                 />
             </div>
             <div className="game-info">
-                <div><h2>{status}</h2></div>
+                <div><h2 data-testid='status'>{status}</h2></div>
                 <ol>{moves}</ol>
             </div>
         </div>
