@@ -11,6 +11,7 @@ export const Square = props => {
         className={
           props.winning ? "winning " + props.value : "standard " + props.value
         }
+        data-testid="square_button"
         onClick={props.onClick}
       >
         {props.value === "X" ? <XIcon /> : props.value === "O" ? <OIcon /> : ""}

@@ -16,7 +16,8 @@ This project was created for learning purposes. Learning by doing for me is extr
 
 * How to made application with React
     * React hooks
-    * React testing
+    * React testing with jest
+      - Code Coverage
 * How to build and deploy page to github pages
 
 ## Available Scripts
@@ -34,6 +35,7 @@ You will also see any lint errors in the console.
 ### `npm test`
 
 Launches the test runner in the interactive watch mode.<br />
+Run coverage test with ```npm run test-coverage```.<br />
 See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
 ### `npm run build`
