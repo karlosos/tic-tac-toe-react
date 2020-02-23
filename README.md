@@ -1,3 +1,5 @@
+![Node.js CI](https://github.com/karlosos/tic-tac-toe-react/workflows/Node.js%20CI/badge.svg?branch=master)
+
 <p align="center">
   <img src="https://i.imgur.com/BSoMY7x.png" alt="pitch_map_logo" />
 </p>
@@ -18,6 +20,7 @@ This project was created for learning purposes. Learning by doing for me is extr
     * React hooks
     * React testing with jest
       - Code Coverage
+    * CI with
 * How to build and deploy page to github pages
 
 ## Available Scripts
