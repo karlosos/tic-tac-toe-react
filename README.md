@@ -1,12 +1,16 @@
-![Node.js CI](https://github.com/karlosos/tic-tac-toe-react/workflows/Node.js%20CI/badge.svg?branch=master)
-
 <p align="center">
   <img src="https://i.imgur.com/BSoMY7x.png" alt="pitch_map_logo" />
 </p>
 
 <p align="center">
+  <a href="#"><img src="https://github.com/karlosos/tic-tac-toe-react/workflows/Node.js%20CI/badge.svg?branch=master" alt="discord"></a>
+  <a href="https://standardjs.com"><img src="https://img.shields.io/badge/code_style-standard-brightgreen.svg" alt="Standard - JavaScript Style Guide"></a>
+</p>
+
+<h2 align="center">
     <a href="https://karlosos.github.io/tic-tac-toe-react/">Live demo</a>
-<p>
+<h2>
+
 
 Tic-tac-toe app created with React.
 
@@ -20,7 +24,8 @@ This project was created for learning purposes. Learning by doing for me is extr
     * React hooks
     * React testing with jest
       - Code Coverage
-    * CI with
+    * CI with with Github Actions
+    * StandardJS linter and formatter
 * How to build and deploy page to github pages
 
 ## Available Scripts

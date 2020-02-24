@@ -18,8 +18,8 @@
     "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test",
-    "test-coverage": "react-scripts test --coverage --watchAll",
+    "test": "standard && react-scripts test",
+    "test-coverage": "standard && react-scripts test --coverage --watchAll",
     "eject": "react-scripts eject"
   },
   "jest": {
@@ -55,5 +55,13 @@
       "last 1 safari version"
     ]
   },
-  "homepage": "https://karlosos.github.io/tic-tac-toe-react"
+  "homepage": "https://karlosos.github.io/tic-tac-toe-react",
+  "standard": {
+    "env": [
+      "jest"
+    ]
+  },
+  "devDependencies": {
+    "standard": "^14.3.1"
+  }
 }
