@@ -89,6 +89,21 @@ ul {
   height: 170px;
   width: 170px;
 
+  @media (max-width: 900px) {
+    height: 25vw;
+    width: 25vw;
+    padding: 0vw;
+
+    svg {
+      width: 80%;
+      height: 80%;
+    }
+
+    button {
+      padding: 0px;
+    }
+  }
+
   button {
     font-size: 24px;
     font-weight: bold;
@@ -159,6 +174,10 @@ ul {
   display: flex;
   flex-direction: row;
   justify-content: center;
+
+  @media (max-width: 900px) {
+    flex-direction: column;
+  }
 }
 
 .game-info {
