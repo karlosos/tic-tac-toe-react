@@ -20,7 +20,7 @@ This project was created for learning purposes. Learning by doing for me is extr
 
 ### What I've learned
 
-* How to made application with React
+* How to make applications with React
     * React hooks
     * React testing with jest
       - Code Coverage
